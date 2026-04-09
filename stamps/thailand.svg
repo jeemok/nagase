@@ -1,62 +1,88 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 200" width="220" height="200">
   <defs>
-    <!-- Rough ink texture filter -->
-    <filter id="inkStamp" x="-5%" y="-5%" width="110%" height="110%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" seed="2" result="noise"/>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="2" xChannelSelector="R" yChannelSelector="G"/>
-    </filter>
-    <!-- Faded/worn look -->
-    <filter id="worn">
-      <feTurbulence type="fractalNoise" baseFrequency="0.065" numOctaves="3" seed="8" result="noise"/>
-      <feColorMatrix in="noise" type="saturate" values="0" result="greyNoise"/>
-      <feComponentTransfer in="greyNoise" result="mask">
-        <feFuncA type="linear" slope="0.6" intercept="0.55"/>
+    <!-- Worn rubber stamp texture -->
+    <filter id="stampWorn" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="4" seed="3" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="grey"/>
+      <feComponentTransfer in="grey" result="mask">
+        <feFuncA type="linear" slope="0.7" intercept="0.45"/>
       </feComponentTransfer>
       <feComposite in="SourceGraphic" in2="mask" operator="in"/>
     </filter>
   </defs>
 
-  <!-- Main stamp group with slight rotation for realism -->
-  <g transform="translate(100,100) rotate(-8) translate(-100,-100)" filter="url(#worn)">
+  <!-- Slight rotation for hand-stamped feel -->
+  <g transform="translate(110,100) rotate(-5) translate(-110,-100)" filter="url(#stampWorn)">
 
-    <!-- Outer circle -->
-    <circle cx="100" cy="100" r="88" fill="none" stroke="#1a3d7c" stroke-width="3.5"/>
-    <!-- Inner circle -->
-    <circle cx="100" cy="100" r="80" fill="none" stroke="#1a3d7c" stroke-width="1.5"/>
+    <!-- Outer oval -->
+    <ellipse cx="110" cy="100" rx="100" ry="90" fill="none" stroke="#c0392b" stroke-width="5"/>
+    <!-- Inner oval -->
+    <ellipse cx="110" cy="100" rx="90" ry="80" fill="none" stroke="#c0392b" stroke-width="2.5"/>
 
-    <!-- Top arc text: IMMIGRATION -->
-    <path id="topText" d="M 25,100 a 75,75 0 0,1 150,0" fill="none"/>
-    <text font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="11" fill="#1a3d7c" font-weight="900" letter-spacing="4">
-      <textPath href="#topText" startOffset="50%" text-anchor="middle">IMMIGRATION</textPath>
+    <!-- THAILAND text on top arc -->
+    <path id="topArc" d="M 30,85 a 90,75 0 0,1 160,0" fill="none"/>
+    <text font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-size="24" fill="#c0392b" font-weight="900" letter-spacing="5">
+      <textPath href="#topArc" startOffset="50%" text-anchor="middle">THAILAND</textPath>
     </text>
 
-    <!-- Bottom arc text: THAILAND -->
-    <path id="bottomText" d="M 22,108 a 78,78 0 0,0 156,0" fill="none"/>
-    <text font-family="'Arial Black', 'Helvetica Neue', Arial, sans-serif" font-size="14" fill="#1a3d7c" font-weight="900" letter-spacing="5">
-      <textPath href="#bottomText" startOffset="50%" text-anchor="middle">THAILAND</textPath>
-    </text>
-
-    <!-- Divider lines -->
-    <line x1="35" y1="88" x2="72" y2="88" stroke="#1a3d7c" stroke-width="1.5"/>
-    <line x1="128" y1="88" x2="165" y2="88" stroke="#1a3d7c" stroke-width="1.5"/>
-    <line x1="35" y1="116" x2="72" y2="116" stroke="#1a3d7c" stroke-width="1.5"/>
-    <line x1="128" y1="116" x2="165" y2="116" stroke="#1a3d7c" stroke-width="1.5"/>
-
-    <!-- Center content -->
-    <!-- Small plane icon -->
-    <g transform="translate(100, 80)">
-      <polygon points="0,-6 -3,-2 -12,2 -3,2 -4,6 0,4 4,6 3,2 12,2 3,-2" fill="#1a3d7c"/>
+    <!-- Decorative stars -->
+    <g fill="#c0392b">
+      <polygon points="35,72 37,78 43,78 38,82 40,88 35,84 30,88 32,82 27,78 33,78" transform="scale(0.7) translate(10,20)"/>
+      <polygon points="175,72 177,78 183,78 178,82 180,88 175,84 170,88 172,82 167,78 173,78" transform="scale(0.7) translate(80,20)"/>
     </g>
 
-    <!-- Date -->
-    <text x="100" y="102" font-family="'Courier New', monospace" font-size="14" fill="#1a3d7c" text-anchor="middle" font-weight="bold" letter-spacing="1">APR 2026</text>
+    <!-- Temple complex silhouette -->
+    <g transform="translate(110, 130)" fill="#c0392b">
 
-    <!-- Entry indicator -->
-    <text x="100" y="117" font-family="'Arial', sans-serif" font-size="8" fill="#1a3d7c" text-anchor="middle" font-weight="bold" letter-spacing="3">ARRIVED</text>
+      <!-- Ground/base line -->
+      <rect x="-75" y="12" width="150" height="4" rx="2"/>
+      <ellipse cx="0" cy="14" rx="78" ry="6" fill="#c0392b" opacity="0.3"/>
 
-    <!-- Small decorative stars between arcs and lines -->
-    <text x="80" y="92" font-size="6" fill="#1a3d7c">★</text>
-    <text x="116" y="92" font-size="6" fill="#1a3d7c">★</text>
+      <!-- Center main temple (tallest prang) -->
+      <!-- Main spire -->
+      <polygon points="0,-55 -5,-45 -7,-35 -4,-35 -7,-25 -10,-15 -6,-15 -10,-5 -14,2 14,2 10,-5 6,-15 10,-15 7,-25 4,-35 7,-35 5,-45"/>
+      <!-- Spire tip -->
+      <polygon points="0,-62 -2.5,-55 2.5,-55"/>
+      <circle cx="0" cy="-63" r="2"/>
+      <!-- Temple base/entrance -->
+      <rect x="-16" y="2" width="32" height="12" rx="1"/>
+      <!-- Door -->
+      <rect x="-5" y="4" width="10" height="10" fill="#f2e4cc" rx="1"/>
+      <path d="M -5,4 Q 0,0 5,4" fill="#c0392b"/>
+      <!-- Roof overhangs -->
+      <polygon points="-20,2 -14,-5 14,-5 20,2"/>
+      <polygon points="-17,-5 -10,-12 10,-12 17,-5"/>
 
+      <!-- Left secondary temple -->
+      <polygon points="-35,-35 -38,-25 -40,-15 -37,-15 -40,-5 -43,2 -29,2 -32,-5 -35,-15 -32,-15 -34,-25"/>
+      <polygon points="-35,-40 -33,-35 -37,-35"/>
+      <circle cx="-35" cy="-41" r="1.5"/>
+      <rect x="-44" y="2" width="16" height="10" rx="1"/>
+      <polygon points="-47,2 -42,-4 -30,-4 -25,2"/>
+
+      <!-- Right secondary temple -->
+      <polygon points="35,-35 38,-25 40,-15 37,-15 40,-5 43,2 29,2 32,-5 35,-15 32,-15 34,-25"/>
+      <polygon points="35,-40 33,-35 37,-35"/>
+      <circle cx="35" cy="-41" r="1.5"/>
+      <rect x="28" y="2" width="16" height="10" rx="1"/>
+      <polygon points="25,2 30,-4 42,-4 47,2"/>
+
+      <!-- Far left small tower -->
+      <polygon points="-58,-18 -60,-10 -63,-2 -64,2 -54,2 -55,-2 -57,-10"/>
+      <polygon points="-58,-22 -56.5,-18 -59.5,-18"/>
+      <rect x="-66" y="2" width="14" height="10" rx="1"/>
+      <polygon points="-68,2 -63,-3 -55,-3 -50,2"/>
+
+      <!-- Far right small tower -->
+      <polygon points="58,-18 60,-10 63,-2 64,2 54,2 55,-2 57,-10"/>
+      <polygon points="58,-22 56.5,-18 59.5,-18"/>
+      <rect x="52" y="2" width="14" height="10" rx="1"/>
+      <polygon points="50,2 55,-3 63,-3 68,2"/>
+
+      <!-- Small flag on right -->
+      <line x1="72" y1="12" x2="72" y2="-10" stroke="#c0392b" stroke-width="1.5"/>
+      <path d="M 72,-10 Q 78,-7 72,-4" fill="#c0392b"/>
+
+    </g>
   </g>
 </svg>
