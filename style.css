@@ -458,8 +458,8 @@ body::before {
 
 /* Stamp image (uploaded per country) */
 .stamp-image {
-  width: 90px;
-  height: 105px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   margin-bottom: 0.5rem;
 }
