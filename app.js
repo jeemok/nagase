@@ -110,7 +110,7 @@ function renderHome() {
 
         <div class="home-footer">
           <span>Nagase KL</span>
-          <span>Global Sports Federation</span>
+          <span>Sports Club</span>
         </div>
       </div>
     </div>
@@ -259,9 +259,6 @@ function renderPassport(member) {
   const stampCount = getStampCount(member);
   const memberClass = getClass(stampCount);
 
-  // Determine current active country (first incomplete one)
-  const currentCountryId = COUNTRIES.find((c) => !member.stamps.includes(c.id))?.id;
-
   const html = `
     <div class="passport">
       <div class="passport-topbar">
@@ -281,7 +278,7 @@ function renderPassport(member) {
             <div class="progress-dots">
               ${COUNTRIES.map(
                 (c) =>
-                  `<div class="progress-dot ${member.stamps.includes(c.id) ? "completed" : ""}" title="${c.name}"></div>`
+                  `<div class="progress-dot ${member.stamps.includes(c.id) ? "completed" : ""}" title="${c.released ? c.name : "???"}"></div>`
               ).join("")}
             </div>
           </div>
@@ -307,21 +304,29 @@ function renderPassport(member) {
         <div class="stamps-grid">
           ${COUNTRIES.map((c) => {
             const completed = member.stamps.includes(c.id);
-            const isActive = c.id === currentCountryId && !completed;
-            const state = completed ? "completed" : isActive ? "active" : "locked";
-            const badge = completed
-              ? '<span class="stamp-badge">Done</span>'
-              : isActive
-              ? '<span class="stamp-badge">Current</span>'
-              : "";
+            const isReleased = c.released;
+
+            if (!isReleased) {
+              return `
+                <div class="stamp-card locked">
+                  <div class="stamp-lock">?</div>
+                  <div class="stamp-country">???</div>
+                  <div class="stamp-activity">Coming Soon</div>
+                </div>
+              `;
+            }
+
+            const state = completed ? "completed" : "released";
+            const stampImg = c.stamp
+              ? `<img class="stamp-image" src="stamps/${c.stamp}" alt="${c.name}" />`
+              : `<div class="stamp-placeholder"></div>`;
 
             return `
               <div class="stamp-card ${state}">
-                ${badge}
-                <span class="stamp-flag">${c.flag}</span>
+                ${completed ? '<span class="stamp-badge">Done</span>' : ""}
+                ${stampImg}
                 <div class="stamp-country">${c.name}</div>
                 <div class="stamp-activity">${c.activity}</div>
-                <div class="stamp-month">${c.month}</div>
               </div>
             `;
           }).join("")}

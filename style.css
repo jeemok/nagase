@@ -323,7 +323,7 @@ body::before {
 .progress-banner {
   background: linear-gradient(135deg, var(--teal) 0%, #0f4f42 100%);
   border-radius: 16px;
-  padding: 2rem;
+  padding: 2.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -331,28 +331,28 @@ body::before {
   font-family: var(--font-display);
   font-style: italic;
   color: var(--gold-light);
-  font-size: 0.9rem;
-  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
 }
 
 .progress-count {
   font-family: var(--font-display);
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 700;
   color: var(--text-primary);
   line-height: 1;
 }
 
 .progress-count span {
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: var(--text-dim);
 }
 
 .progress-title {
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: var(--text-primary);
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
 }
 
 .progress-dots {
@@ -374,15 +374,6 @@ body::before {
 .progress-dot.completed {
   background: var(--gold);
   border-color: var(--gold);
-}
-
-.milestone-text {
-  color: var(--text-dim);
-  font-size: 0.85rem;
-}
-
-.milestone-text strong {
-  color: var(--gold-light);
 }
 
 /* Passenger Card */
@@ -450,20 +441,48 @@ body::before {
   background: linear-gradient(135deg, var(--bg-card) 0%, rgba(201, 168, 76, 0.1) 100%);
 }
 
-.stamp-card.active {
-  border-color: var(--gold);
-  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15) 0%, rgba(201, 168, 76, 0.05) 100%);
-  box-shadow: 0 0 20px rgba(201, 168, 76, 0.15);
+.stamp-card.released {
+  border-color: var(--bg-card-light);
+  background: var(--bg-card);
 }
 
 .stamp-card.locked {
-  opacity: 0.45;
+  opacity: 0.4;
+  border-style: dashed;
 }
 
-.stamp-flag {
-  font-size: 2.5rem;
+/* Stamp image (uploaded per country) */
+.stamp-image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
   margin-bottom: 0.5rem;
-  display: block;
+}
+
+/* Placeholder when no stamp image yet */
+.stamp-placeholder {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  border: 2px dashed var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lock icon for unreleased countries */
+.stamp-lock {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 0.5rem;
+  border-radius: 50%;
+  border: 2px dashed var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: var(--text-muted);
 }
 
 .stamp-country {
@@ -474,29 +493,17 @@ body::before {
   margin-bottom: 0.25rem;
 }
 
-.stamp-activity {
-  color: var(--text-dim);
-  font-size: 0.75rem;
-  margin-bottom: 0.5rem;
-}
-
-.stamp-month {
-  font-size: 0.75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.stamp-card.completed .stamp-month {
-  color: var(--gold);
-}
-
-.stamp-card.locked .stamp-month {
+.stamp-card.locked .stamp-country {
   color: var(--text-muted);
 }
 
-.stamp-card.active .stamp-month {
-  color: var(--gold-light);
+.stamp-activity {
+  color: var(--text-dim);
+  font-size: 0.75rem;
+}
+
+.stamp-card.locked .stamp-activity {
+  color: var(--text-muted);
 }
 
 .stamp-badge {
@@ -514,11 +521,6 @@ body::before {
 .stamp-card.completed .stamp-badge {
   background: var(--gold);
   color: var(--bg-primary);
-}
-
-.stamp-card.active .stamp-badge {
-  background: var(--teal-light);
-  color: white;
 }
 
 /* Stamp overlay for completed */
@@ -658,10 +660,6 @@ body::before {
     gap: 0.75rem;
   }
 
-  .stamp-flag {
-    font-size: 2rem;
-  }
-
   .progress-count {
     font-size: 2.5rem;
   }
@@ -670,8 +668,7 @@ body::before {
     font-size: 1.2rem;
   }
 
-  .passenger-card,
-  .milestones-card {
+  .passenger-card {
     padding: 1rem;
   }
 }

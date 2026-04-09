@@ -2,7 +2,14 @@
 // NAGASE KL GLOBAL PASSPORT — DATA FILE
 // =============================================
 //
-// HOW TO UPDATE STAMPS:
+// HOW TO UPDATE:
+//
+// RELEASE A COUNTRY (make it visible):
+//   Change  released: false  →  released: true
+//   Add stamp image: put image in /stamps/ folder,
+//   then set stamp: "filename.png"
+//
+// ADD STAMPS TO A MEMBER:
 // 1. Find the member by name in the MEMBERS list below
 // 2. Add the country number to their "stamps" array
 //    Country numbers: 1=Japan, 2=Brazil, 3=UK, 4=France,
@@ -17,25 +24,28 @@
 //
 // =============================================
 
+// To release a country, change released to true.
+// To add a stamp image, put the image in /stamps/ folder
+// and set the "stamp" field to the filename, e.g. "japan.png"
 const COUNTRIES = [
-  { id: 1,  name: "Japan",          month: "May 2025",  activity: "Badminton",     flag: "🇯🇵" },
-  { id: 2,  name: "Brazil",         month: "Jun 2025",  activity: "Football",      flag: "🇧🇷" },
-  { id: 3,  name: "United Kingdom", month: "Jul 2025",  activity: "Cricket",       flag: "🇬🇧" },
-  { id: 4,  name: "France",         month: "Aug 2025",  activity: "Cycling",       flag: "🇫🇷" },
-  { id: 5,  name: "Italy",          month: "Sep 2025",  activity: "Volleyball",    flag: "🇮🇹" },
-  { id: 6,  name: "Australia",      month: "Oct 2025",  activity: "Swimming",      flag: "🇦🇺" },
-  { id: 7,  name: "South Korea",    month: "Nov 2025",  activity: "Taekwondo",     flag: "🇰🇷" },
-  { id: 8,  name: "Mexico",         month: "Dec 2025",  activity: "Boxing",        flag: "🇲🇽" },
-  { id: 9,  name: "Egypt",          month: "Jan 2026",  activity: "Rowing",        flag: "🇪🇬" },
-  { id: 10, name: "Canada",         month: "Feb 2026",  activity: "Ice Hockey",    flag: "🇨🇦" },
-  { id: 11, name: "India",          month: "Mar 2026",  activity: "Kabaddi",       flag: "🇮🇳" },
-  { id: 12, name: "Germany",        month: "Apr 2026",  activity: "Track & Field", flag: "🇩🇪" },
-  { id: 13, name: "Spain",          month: "May 2026",  activity: "Tennis",        flag: "🇪🇸" },
-  { id: 14, name: "Thailand",       month: "Jun 2026",  activity: "Muay Thai",     flag: "🇹🇭" },
-  { id: 15, name: "Kenya",          month: "Jul 2026",  activity: "Marathon",      flag: "🇰🇪" },
-  { id: 16, name: "Argentina",      month: "Aug 2026",  activity: "Polo",          flag: "🇦🇷" },
-  { id: 17, name: "New Zealand",    month: "Sep 2026",  activity: "Rugby",         flag: "🇳🇿" },
-  { id: 18, name: "Norway",         month: "Oct 2026",  activity: "Skiing",        flag: "🇳🇴" },
+  { id: 1,  name: "Japan",          activity: "Badminton",     stamp: "", released: false },
+  { id: 2,  name: "Brazil",         activity: "Football",      stamp: "", released: false },
+  { id: 3,  name: "United Kingdom", activity: "Cricket",       stamp: "", released: false },
+  { id: 4,  name: "France",         activity: "Cycling",       stamp: "", released: false },
+  { id: 5,  name: "Italy",          activity: "Volleyball",    stamp: "", released: false },
+  { id: 6,  name: "Australia",      activity: "Swimming",      stamp: "", released: false },
+  { id: 7,  name: "South Korea",    activity: "Taekwondo",     stamp: "", released: false },
+  { id: 8,  name: "Mexico",         activity: "Boxing",        stamp: "", released: false },
+  { id: 9,  name: "Egypt",          activity: "Rowing",        stamp: "", released: false },
+  { id: 10, name: "Canada",         activity: "Ice Hockey",    stamp: "", released: false },
+  { id: 11, name: "India",          activity: "Kabaddi",       stamp: "", released: false },
+  { id: 12, name: "Germany",        activity: "Track & Field", stamp: "", released: false },
+  { id: 13, name: "Spain",          activity: "Tennis",        stamp: "", released: false },
+  { id: 14, name: "Thailand",       activity: "Muay Thai",     stamp: "", released: false },
+  { id: 15, name: "Kenya",          activity: "Marathon",      stamp: "", released: false },
+  { id: 16, name: "Argentina",      activity: "Polo",          stamp: "", released: false },
+  { id: 17, name: "New Zealand",    activity: "Rugby",         stamp: "", released: false },
+  { id: 18, name: "Norway",         activity: "Skiing",        stamp: "", released: false },
 ];
 
 const MEMBERS = [
