@@ -346,7 +346,8 @@ body::before {
 
 .progress-count span {
   font-size: 2rem;
-  color: var(--text-dim);
+  color: #fff;
+  opacity: 0.4;
 }
 
 .progress-title {
