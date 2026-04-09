@@ -322,7 +322,7 @@ body::before {
 }
 
 .progress-banner {
-  background: linear-gradient(135deg, var(--teal) 0%, #0f4f42 100%);
+  background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6d 100%);
   border-radius: 16px;
   padding: 2.5rem;
   margin-bottom: 1.5rem;
@@ -379,15 +379,15 @@ body::before {
 
 /* Passenger Card */
 .passenger-card {
-  background: var(--bg-card);
-  border: 1px solid rgba(201, 168, 76, 0.2);
+  background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6d 100%);
+  border: none;
   border-radius: 12px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
 .passenger-label {
-  color: var(--text-dim);
+  color: rgba(255, 255, 255, 0.6);
   font-size: 0.7rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -397,7 +397,7 @@ body::before {
 .passenger-name {
   font-family: var(--font-display);
   font-size: 1.3rem;
-  color: var(--text-primary);
+  color: #fff;
   margin-bottom: 1rem;
 }
 
@@ -412,7 +412,7 @@ body::before {
 }
 
 .passenger-value {
-  color: var(--text-primary);
+  color: #fff;
   font-size: 0.95rem;
   font-weight: 600;
 }
