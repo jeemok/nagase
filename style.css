@@ -322,7 +322,7 @@ body::before {
 }
 
 .progress-banner {
-  background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6d 100%);
+  background: linear-gradient(135deg, var(--teal) 0%, #0f4f42 100%);
   border-radius: 16px;
   padding: 2.5rem;
   margin-bottom: 1.5rem;
@@ -380,7 +380,7 @@ body::before {
 
 /* Passenger Card */
 .passenger-card {
-  background: linear-gradient(135deg, #2a9d8f 0%, #1a7a6d 100%);
+  background: linear-gradient(135deg, var(--teal) 0%, #0f4f42 100%);
   border: none;
   border-radius: 12px;
   padding: 1.5rem;
