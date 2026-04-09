@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" width="1400" height="900">
+  <!-- World map outlines - subtle on dark navy -->
+  <g fill="none" stroke="#1a3055" stroke-width="1.2" opacity="0.5">
+    <!-- North America -->
+    <path d="M180,200 L195,185 L215,175 L240,165 L265,155 L295,148 L320,142 L345,148 L365,155 L375,168 L360,182 L348,198 L335,215 L320,225 L305,238 L295,255 L282,275 L270,295 L255,315 L242,330 L230,340 L218,330 L208,312 L198,290 L188,272 L178,255 L170,238 L165,220Z"/>
+    <!-- Alaska -->
+    <path d="M120,155 L140,145 L158,148 L168,158 L162,172 L148,178 L132,175 L122,168Z"/>
+    <!-- Greenland -->
+    <path d="M350,95 L375,82 L405,78 L430,85 L440,100 L428,115 L408,122 L385,118 L365,112 L352,105Z"/>
+    <!-- Central America -->
+    <path d="M230,340 L238,348 L242,358 L248,365 L252,372 L245,378 L238,375 L232,365 L228,355 L225,345Z"/>
+    <!-- South America -->
+    <path d="M252,378 L268,370 L285,375 L298,385 L308,400 L315,420 L318,445 L315,470 L308,498 L298,525 L288,548 L278,565 L268,575 L258,568 L252,545 L248,518 L245,488 L242,458 L240,428 L242,400 L248,388Z"/>
+    <!-- Europe -->
+    <path d="M600,148 L618,138 L638,135 L658,138 L675,145 L688,155 L695,168 L688,182 L678,192 L665,198 L648,195 L632,192 L618,188 L608,178 L602,165Z"/>
+    <!-- UK & Ireland -->
+    <path d="M568,148 L578,138 L588,142 L585,155 L578,162 L570,158Z"/>
+    <path d="M558,152 L565,148 L562,158 L556,158Z"/>
+    <!-- Scandinavia -->
+    <path d="M635,98 L642,88 L650,82 L658,88 L655,105 L648,120 L640,132 L635,125 L632,112Z"/>
+    <!-- Iceland -->
+    <path d="M510,92 L522,85 L535,88 L532,98 L520,102 L512,98Z"/>
+    <!-- Africa -->
+    <path d="M618,225 L638,218 L658,222 L675,228 L688,242 L695,262 L698,288 L695,318 L688,348 L678,375 L668,398 L655,418 L642,428 L628,422 L618,405 L612,382 L608,355 L605,328 L602,298 L600,268 L605,245Z"/>
+    <!-- Madagascar -->
+    <path d="M708,378 L715,368 L720,382 L718,398 L710,405 L705,395Z"/>
+    <!-- Asia mainland -->
+    <path d="M700,135 L725,125 L758,118 L795,112 L835,108 L872,112 L905,118 L932,128 L955,142 L968,158 L972,178 L962,198 L945,212 L922,222 L898,228 L872,232 L845,235 L818,238 L792,235 L768,228 L748,218 L732,205 L718,188 L708,172 L702,155Z"/>
+    <!-- Middle East -->
+    <path d="M688,195 L705,188 L718,195 L725,208 L718,222 L705,228 L692,222 L688,210Z"/>
+    <!-- India -->
+    <path d="M808,245 L825,238 L838,248 L842,268 L835,292 L825,312 L815,325 L805,318 L798,298 L795,275 L798,258Z"/>
+    <!-- Southeast Asia -->
+    <path d="M895,242 L912,235 L925,245 L932,262 L925,278 L912,285 L902,275 L895,258Z"/>
+    <!-- Indonesia -->
+    <path d="M908,298 L922,292 L932,298 L928,308 L918,312Z"/>
+    <path d="M938,295 L952,290 L960,298 L955,308 L945,310Z"/>
+    <path d="M965,292 L978,288 L985,295 L980,305 L970,308Z"/>
+    <!-- Japan -->
+    <path d="M985,148 L992,138 L998,142 L1002,158 L998,172 L990,178 L985,168Z"/>
+    <path d="M978,168 L985,178 L982,188 L975,185Z"/>
+    <!-- Philippines -->
+    <path d="M958,258 L965,248 L970,258 L968,270 L962,275Z"/>
+    <!-- Australia -->
+    <path d="M938,402 L965,392 L998,388 L1032,392 L1055,405 L1062,425 L1055,448 L1038,462 L1015,468 L988,465 L962,458 L945,445 L938,425Z"/>
+    <!-- New Zealand -->
+    <path d="M1098,452 L1105,442 L1110,455 L1108,470 L1100,475 L1095,465Z"/>
+    <path d="M1102,478 L1108,475 L1112,485 L1106,492Z"/>
+    <!-- Taiwan -->
+    <path d="M968,222 L972,215 L976,222 L972,230Z"/>
+    <!-- Sri Lanka -->
+    <path d="M818,328 L825,322 L828,332 L822,338Z"/>
+  </g>
+
+  <!-- Latitude / longitude grid -->
+  <g stroke="#152540" stroke-width="0.5" opacity="0.3" fill="none">
+    <!-- Equator -->
+    <path d="M 0,400 Q 350,390 700,400 Q 1050,410 1400,400" stroke-dasharray="8 6"/>
+    <!-- Tropics -->
+    <path d="M 0,300 Q 350,290 700,300 Q 1050,310 1400,300" stroke-dasharray="4 8"/>
+    <path d="M 0,500 Q 350,490 700,500 Q 1050,510 1400,500" stroke-dasharray="4 8"/>
+    <!-- Arctic / Antarctic -->
+    <path d="M 0,150 Q 350,145 700,150 Q 1050,155 1400,150" stroke-dasharray="3 10"/>
+    <path d="M 0,700 Q 350,695 700,700 Q 1050,705 1400,700" stroke-dasharray="3 10"/>
+    <!-- Meridians -->
+    <path d="M 350,0 Q 345,225 350,450 Q 355,675 350,900" stroke-dasharray="4 8"/>
+    <path d="M 700,0 Q 695,225 700,450 Q 705,675 700,900" stroke-dasharray="4 8"/>
+    <path d="M 1050,0 Q 1045,225 1050,450 Q 1055,675 1050,900" stroke-dasharray="4 8"/>
+  </g>
+
+  <!-- Compass rose bottom-right -->
+  <g transform="translate(1250,780)" opacity="0.12">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="45" fill="none" stroke="#c9a84c" stroke-width="1"/>
+    <circle cx="0" cy="0" r="38" fill="none" stroke="#c9a84c" stroke-width="0.5"/>
+    <!-- Cardinal points -->
+    <polygon points="0,-35 5,-10 0,-15 -5,-10" fill="#c9a84c"/>
+    <polygon points="0,35 5,10 0,15 -5,10" fill="#c9a84c"/>
+    <polygon points="-35,0 -10,-5 -15,0 -10,5" fill="#c9a84c"/>
+    <polygon points="35,0 10,-5 15,0 10,5" fill="#c9a84c"/>
+    <!-- Ordinal points -->
+    <polygon points="25,-25 8,-5 5,-8" fill="#c9a84c" opacity="0.6"/>
+    <polygon points="-25,-25 -8,-5 -5,-8" fill="#c9a84c" opacity="0.6"/>
+    <polygon points="25,25 8,5 5,8" fill="#c9a84c" opacity="0.6"/>
+    <polygon points="-25,25 -8,5 -5,8" fill="#c9a84c" opacity="0.6"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="4" fill="#c9a84c"/>
+    <!-- Labels -->
+    <text x="0" y="-50" font-family="Georgia, serif" font-size="10" fill="#c9a84c" text-anchor="middle" font-weight="bold">N</text>
+    <text x="0" y="58" font-family="Georgia, serif" font-size="10" fill="#c9a84c" text-anchor="middle" font-weight="bold">S</text>
+    <text x="-52" y="4" font-family="Georgia, serif" font-size="10" fill="#c9a84c" text-anchor="middle" font-weight="bold">W</text>
+    <text x="52" y="4" font-family="Georgia, serif" font-size="10" fill="#c9a84c" text-anchor="middle" font-weight="bold">E</text>
+  </g>
+
+  <!-- Subtle dotted flight paths -->
+  <g fill="none" stroke="#c9a84c" stroke-width="0.5" opacity="0.06" stroke-dasharray="3 6">
+    <path d="M 300,300 Q 500,200 700,250"/>
+    <path d="M 700,250 Q 850,200 950,250"/>
+    <path d="M 600,180 Q 750,150 900,200"/>
+    <path d="M 250,350 Q 400,280 600,300"/>
+  </g>
+</svg>
