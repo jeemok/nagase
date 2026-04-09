@@ -308,7 +308,7 @@ body::before {
   display: flex;
   gap: 2rem;
   padding: 2rem;
-  max-width: 1200px;
+  max-width: 960px;
   margin: 0 auto;
 }
 
@@ -434,6 +434,11 @@ body::before {
   transition: all 0.3s;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 160px;
 }
 
 .stamp-card.completed {
@@ -447,7 +452,7 @@ body::before {
 }
 
 .stamp-card.locked {
-  opacity: 0.4;
+  border-color: var(--stamp-incomplete);
   border-style: dashed;
 }
 
@@ -463,25 +468,20 @@ body::before {
 .stamp-placeholder {
   width: 80px;
   height: 80px;
-  margin: 0 auto 0.5rem;
   border-radius: 50%;
   border: 2px dashed var(--text-muted);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-/* Lock icon for unreleased countries */
+/* Lock circle with icon for unreleased countries */
 .stamp-lock {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid var(--text-muted);
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
-  padding: 1.5rem 0;
-}
-
-.stamp-card.locked .stamp-country {
-  display: none;
 }
 
 .stamp-country {
@@ -490,10 +490,6 @@ body::before {
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
-}
-
-.stamp-card.locked .stamp-country {
-  color: var(--text-muted);
 }
 
 .stamp-month {
