@@ -311,7 +311,6 @@ function renderPassport(member) {
                 <div class="stamp-card locked">
                   <div class="stamp-lock">?</div>
                   <div class="stamp-country">???</div>
-                  <div class="stamp-activity">Coming Soon</div>
                 </div>
               `;
             }
@@ -326,7 +325,7 @@ function renderPassport(member) {
                 ${completed ? '<span class="stamp-badge">Done</span>' : ""}
                 ${stampImg}
                 <div class="stamp-country">${c.name}</div>
-                <div class="stamp-activity">${c.activity}</div>
+                ${c.month ? `<div class="stamp-month">${c.month}</div>` : ""}
               </div>
             `;
           }).join("")}

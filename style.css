@@ -497,13 +497,13 @@ body::before {
   color: var(--text-muted);
 }
 
-.stamp-activity {
-  color: var(--text-dim);
+.stamp-month {
+  color: var(--gold);
   font-size: 0.75rem;
-}
-
-.stamp-card.locked .stamp-activity {
-  color: var(--text-muted);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-top: 0.25rem;
 }
 
 .stamp-badge {

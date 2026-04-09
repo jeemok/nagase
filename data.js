@@ -12,10 +12,10 @@
 // ADD STAMPS TO A MEMBER:
 // 1. Find the member by name in the MEMBERS list below
 // 2. Add the country number to their "stamps" array
-//    Country numbers: 1=Japan, 2=Brazil, 3=UK, 4=France,
-//    5=Italy, 6=Australia, 7=South Korea, 8=Mexico,
-//    9=Egypt, 10=Canada, 11=India, 12=Germany,
-//    13=Spain, 14=Thailand, 15=Kenya, 16=Argentina,
+//    Country numbers: 1=Thailand, 2=Japan, 3=Brazil, 4=UK,
+//    5=France, 6=Italy, 7=Australia, 8=South Korea,
+//    9=Mexico, 10=Egypt, 11=Canada, 12=India,
+//    13=Germany, 14=Spain, 15=Kenya, 16=Argentina,
 //    17=New Zealand, 18=Norway
 // 3. Save, commit, and push — Vercel auto-deploys
 //
@@ -24,28 +24,28 @@
 //
 // =============================================
 
-// To release a country, change released to true.
+// To release a country, change released to true and set the month.
 // To add a stamp image, put the image in /stamps/ folder
 // and set the "stamp" field to the filename, e.g. "japan.png"
 const COUNTRIES = [
-  { id: 1,  name: "Japan",          activity: "Badminton",     stamp: "", released: false },
-  { id: 2,  name: "Brazil",         activity: "Football",      stamp: "", released: false },
-  { id: 3,  name: "United Kingdom", activity: "Cricket",       stamp: "", released: false },
-  { id: 4,  name: "France",         activity: "Cycling",       stamp: "", released: false },
-  { id: 5,  name: "Italy",          activity: "Volleyball",    stamp: "", released: false },
-  { id: 6,  name: "Australia",      activity: "Swimming",      stamp: "", released: false },
-  { id: 7,  name: "South Korea",    activity: "Taekwondo",     stamp: "", released: false },
-  { id: 8,  name: "Mexico",         activity: "Boxing",        stamp: "", released: false },
-  { id: 9,  name: "Egypt",          activity: "Rowing",        stamp: "", released: false },
-  { id: 10, name: "Canada",         activity: "Ice Hockey",    stamp: "", released: false },
-  { id: 11, name: "India",          activity: "Kabaddi",       stamp: "", released: false },
-  { id: 12, name: "Germany",        activity: "Track & Field", stamp: "", released: false },
-  { id: 13, name: "Spain",          activity: "Tennis",        stamp: "", released: false },
-  { id: 14, name: "Thailand",       activity: "Muay Thai",     stamp: "thailand.svg", released: true },
-  { id: 15, name: "Kenya",          activity: "Marathon",      stamp: "", released: false },
-  { id: 16, name: "Argentina",      activity: "Polo",          stamp: "", released: false },
-  { id: 17, name: "New Zealand",    activity: "Rugby",         stamp: "", released: false },
-  { id: 18, name: "Norway",         activity: "Skiing",        stamp: "", released: false },
+  { id: 1,  name: "Thailand",       month: "APR 2026", stamp: "thailand.svg", released: true },
+  { id: 2,  name: "Japan",          month: "",          stamp: "",             released: false },
+  { id: 3,  name: "Brazil",         month: "",          stamp: "",             released: false },
+  { id: 4,  name: "United Kingdom", month: "",          stamp: "",             released: false },
+  { id: 5,  name: "France",         month: "",          stamp: "",             released: false },
+  { id: 6,  name: "Italy",          month: "",          stamp: "",             released: false },
+  { id: 7,  name: "Australia",      month: "",          stamp: "",             released: false },
+  { id: 8,  name: "South Korea",    month: "",          stamp: "",             released: false },
+  { id: 9,  name: "Mexico",         month: "",          stamp: "",             released: false },
+  { id: 10, name: "Egypt",          month: "",          stamp: "",             released: false },
+  { id: 11, name: "Canada",         month: "",          stamp: "",             released: false },
+  { id: 12, name: "India",          month: "",          stamp: "",             released: false },
+  { id: 13, name: "Germany",        month: "",          stamp: "",             released: false },
+  { id: 14, name: "Spain",          month: "",          stamp: "",             released: false },
+  { id: 15, name: "Kenya",          month: "",          stamp: "",             released: false },
+  { id: 16, name: "Argentina",      month: "",          stamp: "",             released: false },
+  { id: 17, name: "New Zealand",    month: "",          stamp: "",             released: false },
+  { id: 18, name: "Norway",         month: "",          stamp: "",             released: false },
 ];
 
 const MEMBERS = [
@@ -84,7 +84,7 @@ const MEMBERS = [
   { name: "Lim Chun Hoe",              email: "chunhoe@nagase.com.my",            stamps: [] },
   { name: "Lim Khang Jing",            email: "jing@nagase.com.my",               stamps: [] },
   { name: "Lo Kit Yan",                email: "kityan@nagase.com.my",             stamps: [] },
-  { name: "Loi Siew Thong",            email: "siewthong@nagase.com.my",          stamps: [14] },
+  { name: "Loi Siew Thong",            email: "siewthong@nagase.com.my",          stamps: [1] },
   { name: "Maznah Binti Suffian",       email: "maznah@nagase.com.my",            stamps: [] },
   { name: "Melvin Tan Kok Guan",        email: "melvin@nagase.com.my",            stamps: [] },
   { name: "Michelle Lee Yin Fun",       email: "michellelee@nagase.com.my",       stamps: [] },
