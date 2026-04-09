@@ -1,30 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 190" width="160" height="190">
   <defs>
-    <clipPath id="flagClip">
-      <circle cx="100" cy="100" r="68"/>
-    </clipPath>
+    <!-- Aged paper background -->
+    <linearGradient id="paper" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2e4cc"/>
+      <stop offset="50%" stop-color="#ede0c8"/>
+      <stop offset="100%" stop-color="#e5d4b8"/>
+    </linearGradient>
+    <!-- Perforated edge mask -->
+    <mask id="perfMask">
+      <rect x="0" y="0" width="160" height="190" fill="white"/>
+      <!-- Top edge perforations -->
+      <circle cx="12" cy="4" r="5" fill="black"/><circle cx="24" cy="4" r="5" fill="black"/>
+      <circle cx="36" cy="4" r="5" fill="black"/><circle cx="48" cy="4" r="5" fill="black"/>
+      <circle cx="60" cy="4" r="5" fill="black"/><circle cx="72" cy="4" r="5" fill="black"/>
+      <circle cx="84" cy="4" r="5" fill="black"/><circle cx="96" cy="4" r="5" fill="black"/>
+      <circle cx="108" cy="4" r="5" fill="black"/><circle cx="120" cy="4" r="5" fill="black"/>
+      <circle cx="132" cy="4" r="5" fill="black"/><circle cx="148" cy="4" r="5" fill="black"/>
+      <!-- Bottom edge perforations -->
+      <circle cx="12" cy="186" r="5" fill="black"/><circle cx="24" cy="186" r="5" fill="black"/>
+      <circle cx="36" cy="186" r="5" fill="black"/><circle cx="48" cy="186" r="5" fill="black"/>
+      <circle cx="60" cy="186" r="5" fill="black"/><circle cx="72" cy="186" r="5" fill="black"/>
+      <circle cx="84" cy="186" r="5" fill="black"/><circle cx="96" cy="186" r="5" fill="black"/>
+      <circle cx="108" cy="186" r="5" fill="black"/><circle cx="120" cy="186" r="5" fill="black"/>
+      <circle cx="132" cy="186" r="5" fill="black"/><circle cx="148" cy="186" r="5" fill="black"/>
+      <!-- Left edge perforations -->
+      <circle cx="4" cy="12" r="5" fill="black"/><circle cx="4" cy="24" r="5" fill="black"/>
+      <circle cx="4" cy="36" r="5" fill="black"/><circle cx="4" cy="48" r="5" fill="black"/>
+      <circle cx="4" cy="60" r="5" fill="black"/><circle cx="4" cy="72" r="5" fill="black"/>
+      <circle cx="4" cy="84" r="5" fill="black"/><circle cx="4" cy="96" r="5" fill="black"/>
+      <circle cx="4" cy="108" r="5" fill="black"/><circle cx="4" cy="120" r="5" fill="black"/>
+      <circle cx="4" cy="132" r="5" fill="black"/><circle cx="4" cy="144" r="5" fill="black"/>
+      <circle cx="4" cy="156" r="5" fill="black"/><circle cx="4" cy="168" r="5" fill="black"/>
+      <circle cx="4" cy="180" r="5" fill="black"/>
+      <!-- Right edge perforations -->
+      <circle cx="156" cy="12" r="5" fill="black"/><circle cx="156" cy="24" r="5" fill="black"/>
+      <circle cx="156" cy="36" r="5" fill="black"/><circle cx="156" cy="48" r="5" fill="black"/>
+      <circle cx="156" cy="60" r="5" fill="black"/><circle cx="156" cy="72" r="5" fill="black"/>
+      <circle cx="156" cy="84" r="5" fill="black"/><circle cx="156" cy="96" r="5" fill="black"/>
+      <circle cx="156" cy="108" r="5" fill="black"/><circle cx="156" cy="120" r="5" fill="black"/>
+      <circle cx="156" cy="132" r="5" fill="black"/><circle cx="156" cy="144" r="5" fill="black"/>
+      <circle cx="156" cy="156" r="5" fill="black"/><circle cx="156" cy="168" r="5" fill="black"/>
+      <circle cx="156" cy="180" r="5" fill="black"/>
+    </mask>
   </defs>
 
-  <!-- Outer dashed circle border -->
-  <circle cx="100" cy="100" r="85" fill="none" stroke="#c9a84c" stroke-width="2.5" stroke-dasharray="6 4" opacity="0.7"/>
+  <!-- Stamp body with perforated edges -->
+  <g mask="url(#perfMask)">
+    <!-- Paper background -->
+    <rect x="0" y="0" width="160" height="190" fill="url(#paper)"/>
 
-  <!-- Inner dashed circle border -->
-  <circle cx="100" cy="100" r="75" fill="none" stroke="#c9a84c" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+    <!-- Inner decorative border -->
+    <rect x="12" y="12" width="136" height="166" fill="none" stroke="#8b3a3a" stroke-width="1.5" rx="2"/>
+    <rect x="16" y="16" width="128" height="158" fill="none" stroke="#8b3a3a" stroke-width="0.5" rx="1" opacity="0.5"/>
 
-  <!-- Thai flag clipped to circle -->
-  <g clip-path="url(#flagClip)">
-    <!-- Red stripe (top) -->
-    <rect x="30" y="32" width="140" height="27.2" fill="#A51931"/>
-    <!-- White stripe -->
-    <rect x="30" y="59.2" width="140" height="27.2" fill="#F4F5F8"/>
-    <!-- Blue stripe (center, double height) -->
-    <rect x="30" y="86.4" width="140" height="27.2" fill="#2D2A4A"/>
-    <!-- White stripe -->
-    <rect x="30" y="113.6" width="140" height="27.2" fill="#F4F5F8"/>
-    <!-- Red stripe (bottom) -->
-    <rect x="30" y="140.8" width="140" height="27.2" fill="#A51931"/>
+    <!-- Illustration area background -->
+    <rect x="22" y="22" width="116" height="115" fill="#f7efe0" stroke="#8b3a3a" stroke-width="0.3" rx="1"/>
+
+    <!-- Thai Temple (Wat Arun style) illustration -->
+    <g transform="translate(80, 82)" fill="#8b3a3a" opacity="0.9">
+      <!-- Main central prang (tower) -->
+      <polygon points="0,-52 -2,-48 -3,-44 -1.5,-44 -2.5,-38 -4,-32 -2,-32 -3.5,-24 -5.5,-16 -3,-16 -5,-8 -8,0 8,0 5,-8 3,-16 5.5,-16 3.5,-24 2,-32 4,-32 2.5,-38 1.5,-44 3,-44 2,-48"/>
+      <!-- Spire tip ornament -->
+      <polygon points="0,-56 -1,-52 1,-52"/>
+      <circle cx="0" cy="-57" r="1.5"/>
+
+      <!-- Left tower -->
+      <polygon points="-22,-30 -24,-24 -26,-16 -28,-8 -30,0 -16,0 -18,-8 -20,-16 -22,-24"/>
+      <polygon points="-22,-34 -21,-30 -23,-30"/>
+      <circle cx="-22" cy="-35" r="1"/>
+
+      <!-- Right tower -->
+      <polygon points="22,-30 24,-24 26,-16 28,-8 30,0 16,0 18,-8 20,-16 22,-24"/>
+      <polygon points="22,-34 21,-30 23,-30"/>
+      <circle cx="22" cy="-35" r="1"/>
+
+      <!-- Far left small tower -->
+      <polygon points="-36,-18 -37,-12 -39,-6 -40,0 -32,0 -33,-6 -35,-12"/>
+      <polygon points="-36,-21 -35,-18 -37,-18"/>
+
+      <!-- Far right small tower -->
+      <polygon points="36,-18 37,-12 39,-6 40,0 32,0 33,-6 35,-12"/>
+      <polygon points="36,-21 35,-18 37,-18"/>
+
+      <!-- Base platform tiers -->
+      <rect x="-42" y="0" width="84" height="4" rx="1"/>
+      <rect x="-46" y="4" width="92" height="3" rx="1"/>
+      <rect x="-50" y="7" width="100" height="4" rx="1"/>
+
+      <!-- Decorative tier lines -->
+      <line x1="-8" y1="-8" x2="8" y2="-8" stroke="#8b3a3a" stroke-width="0.5"/>
+      <line x1="-5.5" y1="-16" x2="5.5" y2="-16" stroke="#8b3a3a" stroke-width="0.5"/>
+      <line x1="-3.5" y1="-24" x2="3.5" y2="-24" stroke="#8b3a3a" stroke-width="0.5"/>
+    </g>
+
+    <!-- Country name -->
+    <text x="80" y="152" font-family="Georgia, 'Times New Roman', serif" font-size="13" fill="#8b3a3a" text-anchor="middle" font-weight="bold" letter-spacing="1.5">THAILAND</text>
+
+    <!-- Denomination / decorative value -->
+    <text x="80" y="168" font-family="Georgia, 'Times New Roman', serif" font-size="9" fill="#8b3a3a" text-anchor="middle" opacity="0.6" letter-spacing="1">✦ NAGASE KL ✦</text>
+
+    <!-- Subtle aging texture spots -->
+    <circle cx="30" cy="40" r="8" fill="#c4a66a" opacity="0.08"/>
+    <circle cx="125" cy="130" r="10" fill="#c4a66a" opacity="0.06"/>
+    <circle cx="45" cy="155" r="6" fill="#c4a66a" opacity="0.07"/>
   </g>
-
-  <!-- Circle outline on top of flag for clean edge -->
-  <circle cx="100" cy="100" r="68" fill="none" stroke="#c9a84c" stroke-width="2" opacity="0.6"/>
 </svg>
