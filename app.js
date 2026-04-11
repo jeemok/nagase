@@ -320,7 +320,7 @@ function renderPassport(member) {
             }
 
             const state = completed ? "completed" : "released";
-            const stampImg = c.stamp
+            const stampImg = completed && c.stamp
               ? `<img class="stamp-image" src="stamps/${c.stamp}" alt="${c.name}" />`
               : `<div class="stamp-placeholder"></div>`;
 

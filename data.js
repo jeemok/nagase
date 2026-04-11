@@ -67,6 +67,7 @@ const MEMBERS = [
   { name: "Erica Chiew Lai Wah",        email: "erica@nagase.com.my",             stamps: [] },
   { name: "Eve Chai Pei Hua",           email: "eve@nagase.com.my",               stamps: [] },
   { name: "Grace Tan Li Yin",           email: "grace@nagase.com.my",             stamps: [] },
+  { name: "Jadoli",                       email: "jackdolliey@gmail.com",           stamps: [] },
   { name: "Janice How Jia Yeng",        email: "janice@nagase.com.my",            stamps: [] },
   { name: "Jeston Lim Wei Jian",        email: "jeston@nagase.com.my",            stamps: [] },
   { name: "Joey Yu Szu Hui",            email: "joey@nagase.com.my",              stamps: [] },
@@ -91,6 +92,7 @@ const MEMBERS = [
   { name: "Michelle Yap Jing Yi",       email: "michelleyap@nagase.com.my",       stamps: [] },
   { name: "Mohd Farrel Mohd Yousof",    email: "farrel@nagase.com.my",            stamps: [] },
   { name: "Morita Takehiro",            email: "takehiro.morita@nagase.co.jp",    stamps: [] },
+  { name: "Nezam",                      email: "mohdnezamyahaya@gmail.com",        stamps: [] },
   { name: "Phua Boon Guan",             email: "phua@nagase.com.my",              stamps: [] },
   { name: "Shanice Loo Lay Swan",       email: "shanice@nagase.com.my",           stamps: [] },
   { name: "Shibata Kenro",              email: "kenro.shibata@nagase.co.jp",      stamps: [] },
@@ -101,4 +103,5 @@ const MEMBERS = [
   { name: "Tan Wei Rou",               email: "weirou@nagase.com.my",             stamps: [] },
   { name: "Yong Sui Wei",              email: "yongsw@nagase.com.my",             stamps: [] },
   { name: "Yukee Yoo Ying Ying",        email: "yukee@nagase.com.my",             stamps: [] },
+  { name: "Zambri",                     email: "zambrimustapa77@gmail.com",        stamps: [] },
 ];
