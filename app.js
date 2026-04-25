@@ -48,9 +48,7 @@ function searchMembers(query) {
   if (!query || query.length < 2) return [];
   const q = query.toLowerCase();
   return MEMBERS.filter(
-    (m) =>
-      m.name.toLowerCase().includes(q) ||
-      m.email.toLowerCase().includes(q)
+    (m) => m.name.toLowerCase().includes(q)
   ).slice(0, 6);
 }
 
@@ -82,17 +80,17 @@ function renderHome() {
 
         <div class="login-card">
           <h2>Welcome Back</h2>
-          <p>Your next destination awaits! Enter your name or email to continue.</p>
+          <p>Your next destination awaits! Enter your name to continue.</p>
 
           <div class="search-wrapper">
-            <label class="search-label">Name or Company Email Address</label>
+            <label class="search-label">Your Name</label>
             <div class="search-input-wrapper">
-              <span class="icon">📧</span>
+              <span class="icon">👤</span>
               <input
                 type="text"
                 class="search-input"
                 id="searchInput"
-                placeholder="name@nagase.com.my"
+                placeholder="Search by name..."
                 autocomplete="off"
               />
             </div>
@@ -104,7 +102,7 @@ function renderHome() {
           </button>
 
           <div class="error-message" id="errorMsg">
-            Member not found. Please check your name or email and try again.
+            Member not found. Please check your name and try again.
           </div>
         </div>
 
@@ -149,7 +147,6 @@ function initSearch() {
         (m, i) => `
       <div class="search-dropdown-item" data-index="${i}" data-email="${m.email}">
         <div class="item-name">${highlightMatch(m.name, query)}</div>
-        <div class="item-email">${highlightMatch(m.email, query)}</div>
       </div>
     `
       )
@@ -218,13 +215,6 @@ function initSearch() {
   function handleViewClick() {
     const query = input.value.trim().toLowerCase();
     if (!query) return;
-
-    // Try exact email match first
-    const byEmail = MEMBERS.find((m) => m.email.toLowerCase() === query);
-    if (byEmail) {
-      navigate("/passport/" + encodeURIComponent(byEmail.email));
-      return;
-    }
 
     // Try exact name match
     const byName = MEMBERS.find((m) => m.name.toLowerCase() === query);
@@ -338,6 +328,52 @@ function renderPassport(member) {
   `;
 
   app.innerHTML = html;
+  animateCompletedStamps();
+}
+
+function animateCompletedStamps() {
+  const allCards = app.querySelectorAll(".stamp-card");
+  allCards.forEach((card, index) => {
+    if (!card.classList.contains("completed")) return;
+    const img = card.querySelector(".stamp-image");
+    if (!img) return;
+    img.style.opacity = "0";
+    // Card fadeInUp delay: (index+1)*50ms + 400ms duration
+    const delay = (index + 1) * 50 + 400;
+    setTimeout(() => {
+      img.style.opacity = "";
+      img.style.animation = "stampIn 0.5s cubic-bezier(0.22, 1, 0.36, 1) both";
+      playStampSound();
+    }, delay);
+  });
+}
+
+function playStampSound() {
+  try {
+    const ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const sampleRate = ctx.sampleRate;
+    const duration = 0.18;
+    const buffer = ctx.createBuffer(1, sampleRate * duration, sampleRate);
+    const data = buffer.getChannelData(0);
+    for (let i = 0; i < data.length; i++) {
+      const t = i / sampleRate;
+      // Low thud + noise burst
+      data[i] =
+        Math.sin(2 * Math.PI * 75 * t) * Math.exp(-t * 35) * 0.7 +
+        (Math.random() * 2 - 1) * Math.exp(-t * 50) * 0.4;
+    }
+    const source = ctx.createBufferSource();
+    source.buffer = buffer;
+    const gain = ctx.createGain();
+    gain.gain.setValueAtTime(0.8, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + duration);
+    source.connect(gain);
+    gain.connect(ctx.destination);
+    source.start();
+    source.onended = () => ctx.close();
+  } catch (e) {
+    // Audio not available, skip silently
+  }
 }
 
 // ---- NOT FOUND PAGE ----
