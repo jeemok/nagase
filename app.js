@@ -312,7 +312,7 @@ function renderPassport(member) {
             const state = completed ? "completed" : "released";
             const stampImg = completed && c.stamp
               ? `<img class="stamp-image" src="stamps/${c.stamp}" alt="${c.name}" />`
-              : `<div class="stamp-placeholder"></div>`;
+              : `<img class="stamp-image stamp-missed" src="stamps/flight-missed.svg" alt="Flight Missed" />`;
 
             return `
               <div class="stamp-card ${state}">
