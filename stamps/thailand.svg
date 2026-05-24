@@ -21,7 +21,7 @@
 
     <!-- THAILAND text inside inner circle -->
     <path id="topArc" d="M 35,110 A 75,75 0 0,1 185,110" fill="none"/>
-    <text font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-size="20" fill="#c0392b" font-weight="900" letter-spacing="3">
+    <text font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-size="23" fill="#c0392b" font-weight="900" letter-spacing="3">
       <textPath href="#topArc" startOffset="50%" text-anchor="middle">THAILAND</textPath>
     </text>
 
