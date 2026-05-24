@@ -309,16 +309,23 @@ function renderPassport(member) {
               `;
             }
 
+            const photoCount = PHOTOS[c.id] ? PHOTOS[c.id].length : 0;
             const state = completed ? "completed" : "released";
             const stampImg = completed && c.stamp
               ? `<img class="stamp-image" src="stamps/${c.stamp}" alt="${c.name}" />`
               : `<img class="stamp-image stamp-missed" src="stamps/flight-missed.svg" alt="Flight Missed" />`;
 
             return `
-              <div class="stamp-card ${state}">
+              <div class="stamp-card ${state}${photoCount ? " has-gallery" : ""}" ${photoCount ? `onclick="openGallery(${c.id})"` : ""}>
                 ${stampImg}
                 <div class="stamp-country">${c.name}</div>
                 ${c.month ? `<div class="stamp-month">${c.month}</div>` : ""}
+                ${photoCount ? `
+                  <div class="gallery-badge">
+                    <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M20 5h-2.83L15 3H9L6.83 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-8 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+                    ${photoCount}
+                  </div>
+                ` : ""}
               </div>
             `;
           }).join("")}
@@ -394,4 +401,100 @@ function escapeHtmlSafe(str) {
   const div = document.createElement("div");
   div.textContent = str;
   return div.innerHTML;
+}
+
+// ---- GALLERY ----
+function openGallery(countryId) {
+  const photos = PHOTOS[countryId] || [];
+  if (!photos.length) return;
+  const country = COUNTRIES.find((c) => c.id === countryId);
+
+  const modal = document.createElement("div");
+  modal.className = "gallery-modal";
+  modal.innerHTML = `
+    <div class="gallery-inner">
+      <div class="gallery-header">
+        <div>
+          <div class="gallery-title">${country.name}</div>
+          <div class="gallery-subtitle">${country.month} · ${photos.length} photos</div>
+        </div>
+        <button class="gallery-close" onclick="closeGallery()">✕</button>
+      </div>
+      <div class="gallery-grid">
+        ${photos.map((src, i) => `
+          <div class="gallery-thumb" onclick="openLightbox(${countryId}, ${i})">
+            <img src="${src}" alt="Photo ${i + 1}" loading="lazy" />
+          </div>
+        `).join("")}
+      </div>
+    </div>
+  `;
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) closeGallery();
+  });
+
+  document.body.appendChild(modal);
+  requestAnimationFrame(() => modal.classList.add("active"));
+  document.addEventListener("keydown", handleGalleryKey);
+}
+
+function closeGallery() {
+  const modal = document.querySelector(".gallery-modal");
+  if (!modal) return;
+  modal.classList.remove("active");
+  setTimeout(() => modal.remove(), 280);
+  document.removeEventListener("keydown", handleGalleryKey);
+}
+
+function openLightbox(countryId, index) {
+  const photos = PHOTOS[countryId];
+  const existing = document.querySelector(".gallery-lightbox");
+  if (existing) existing.remove();
+
+  const lb = document.createElement("div");
+  lb.className = "gallery-lightbox";
+  lb.dataset.countryId = countryId;
+  lb.dataset.index = index;
+  lb.innerHTML = `
+    <button class="lb-close" onclick="closeLightbox()">✕</button>
+    <button class="lb-prev" onclick="lightboxNav(-1)">&#8249;</button>
+    <div class="lb-img-wrap">
+      <img class="lb-img" src="${photos[index]}" alt="Photo ${index + 1}" />
+    </div>
+    <button class="lb-next" onclick="lightboxNav(1)">&#8250;</button>
+    <div class="lb-counter">${index + 1} / ${photos.length}</div>
+  `;
+
+  lb.addEventListener("click", (e) => {
+    if (e.target === lb || e.target.classList.contains("lb-img-wrap")) closeLightbox();
+  });
+
+  document.querySelector(".gallery-modal").appendChild(lb);
+  requestAnimationFrame(() => lb.classList.add("active"));
+}
+
+function closeLightbox() {
+  const lb = document.querySelector(".gallery-lightbox");
+  if (lb) lb.remove();
+}
+
+function lightboxNav(dir) {
+  const lb = document.querySelector(".gallery-lightbox");
+  if (!lb) return;
+  const countryId = parseInt(lb.dataset.countryId);
+  const photos = PHOTOS[countryId];
+  const index = (parseInt(lb.dataset.index) + dir + photos.length) % photos.length;
+  lb.dataset.index = index;
+  lb.querySelector(".lb-img").src = photos[index];
+  lb.querySelector(".lb-counter").textContent = `${index + 1} / ${photos.length}`;
+}
+
+function handleGalleryKey(e) {
+  if (e.key === "Escape") {
+    if (document.querySelector(".gallery-lightbox")) { closeLightbox(); return; }
+    closeGallery();
+  }
+  if (e.key === "ArrowLeft")  lightboxNav(-1);
+  if (e.key === "ArrowRight") lightboxNav(1);
 }

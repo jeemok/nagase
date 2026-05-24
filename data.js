@@ -105,3 +105,35 @@ const MEMBERS = [
   { name: "Yukee Yoo Ying Ying",        email: "yukee@nagase.com.my",             stamps: [] },
   { name: "Zambri",                     email: "zambrimustapa77@gmail.com",        stamps: [1] },
 ];
+
+// =============================================
+// PHOTOS
+// =============================================
+// To add photos for a country, add an entry keyed by country ID.
+// List photo paths relative to the site root.
+// =============================================
+const PHOTOS = {
+  3: [ // Egypt — MAY 2026
+    "photos/may-egypt/IMG_6731.webp",
+    "photos/may-egypt/IMG_6732.webp",
+    "photos/may-egypt/IMG_6733.webp",
+    "photos/may-egypt/IMG_6737.webp",
+    "photos/may-egypt/IMG_6738.webp",
+    "photos/may-egypt/IMG_6739.webp",
+    "photos/may-egypt/IMG_6740.webp",
+    "photos/may-egypt/IMG_6741.webp",
+    "photos/may-egypt/IMG_6743.webp",
+    "photos/may-egypt/IMG_6746.webp",
+    "photos/may-egypt/IMG_6747.webp",
+    "photos/may-egypt/IMG_6750.webp",
+    "photos/may-egypt/IMG_6751.webp",
+    "photos/may-egypt/IMG_6752.webp",
+    "photos/may-egypt/IMG_6753.webp",
+    "photos/may-egypt/277effbc-5061-431b-bfe2-bf15e7236b8c.webp",
+    "photos/may-egypt/5be63b23-83c0-4ab9-8a2b-9d0f6eda2f88.webp",
+    "photos/may-egypt/665ef7ea-90d2-4d5b-9563-b8c7fb3b4aed.webp",
+    "photos/may-egypt/8acf9dae-f654-4c8c-92a0-9b2ba2543384.webp",
+    "photos/may-egypt/b1f48e80-3fb9-48fd-85b5-2b58748a080c.webp",
+    "photos/may-egypt/c2ee7c52-daf2-467f-8289-e96d9b949c92.webp",
+  ],
+};
