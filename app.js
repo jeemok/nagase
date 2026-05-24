@@ -404,6 +404,8 @@ function escapeHtmlSafe(str) {
 }
 
 // ---- GALLERY ----
+let galleryAudio = null;
+
 function openGallery(countryId) {
   const photos = PHOTOS[countryId] || [];
   if (!photos.length) return;
@@ -437,6 +439,14 @@ function openGallery(countryId) {
   document.body.appendChild(modal);
   requestAnimationFrame(() => modal.classList.add("active"));
   document.addEventListener("keydown", handleGalleryKey);
+
+  if (country.music) {
+    galleryAudio = new Audio(country.music);
+    galleryAudio.loop = true;
+    galleryAudio.volume = 0;
+    galleryAudio.play().catch(() => {});
+    fadeAudio(galleryAudio, 0, 0.4, 1500);
+  }
 }
 
 function closeGallery() {
@@ -445,6 +455,28 @@ function closeGallery() {
   modal.classList.remove("active");
   setTimeout(() => modal.remove(), 280);
   document.removeEventListener("keydown", handleGalleryKey);
+
+  if (galleryAudio) {
+    fadeAudio(galleryAudio, galleryAudio.volume, 0, 600, () => {
+      galleryAudio.pause();
+      galleryAudio = null;
+    });
+  }
+}
+
+function fadeAudio(audio, from, to, duration, onDone) {
+  const steps = 30;
+  const interval = duration / steps;
+  const delta = (to - from) / steps;
+  let step = 0;
+  const timer = setInterval(() => {
+    step++;
+    audio.volume = Math.min(1, Math.max(0, from + delta * step));
+    if (step >= steps) {
+      clearInterval(timer);
+      if (onDone) onDone();
+    }
+  }, interval);
 }
 
 function openLightbox(countryId, index) {

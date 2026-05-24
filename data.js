@@ -30,7 +30,7 @@
 const COUNTRIES = [
   { id: 1,  name: "Thailand",       month: "APR 2026", stamp: "thailand.svg", released: true },
   { id: 2,  name: "Netherlands",     month: "MAY 2026",  stamp: "netherlands.svg", released: true  },
-  { id: 3,  name: "Egypt",          month: "MAY 2026",  stamp: "egypt.svg",       released: true  },
+  { id: 3,  name: "Egypt",          month: "MAY 2026",  stamp: "egypt.svg",       released: true,  music: "music/egypt.mp3" },
   { id: 4,  name: "United Kingdom", month: "",          stamp: "",             released: false },
   { id: 5,  name: "France",         month: "",          stamp: "",             released: false },
   { id: 6,  name: "Italy",          month: "",          stamp: "",             released: false },
