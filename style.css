@@ -379,8 +379,8 @@ body::before {
 }
 
 .progress-dot.missed {
-  background: var(--text-muted);
-  border-color: var(--text-muted);
+  background: var(--text-dim);
+  border-color: var(--text-dim);
 }
 
 /* Passenger Card */
