@@ -268,7 +268,7 @@ function renderPassport(member) {
             <div class="progress-dots">
               ${COUNTRIES.map(
                 (c) =>
-                  `<div class="progress-dot ${member.stamps.includes(c.id) ? "completed" : ""}" title="${c.released ? c.name : "???"}"></div>`
+                  `<div class="progress-dot ${member.stamps.includes(c.id) ? "completed" : c.released ? "missed" : ""}" title="${c.released ? c.name : "???"}"></div>`
               ).join("")}
             </div>
           </div>

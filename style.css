@@ -378,6 +378,11 @@ body::before {
   border-color: var(--gold);
 }
 
+.progress-dot.missed {
+  background: var(--text-muted);
+  border-color: var(--text-muted);
+}
+
 /* Passenger Card */
 .passenger-card {
   background: linear-gradient(135deg, var(--teal) 0%, #0f4f42 100%);
