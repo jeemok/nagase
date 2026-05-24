@@ -81,7 +81,7 @@ const MEMBERS = [
   { name: "Kow Yip Chang",             email: "kow@nagase.com.my",                stamps: [1, 2] },
   { name: "Lai Mei Yun",               email: "meiyun@nagase.com.my",             stamps: [1, 3] },
   { name: "Lam Shin Wei",              email: "lam@nagase.com.my",                stamps: [1, 2, 3] },
-  { name: "Lee Wai Leng",              email: "waileng@nagase.com.my",            stamps: [] },
+  { name: "Lee Wai Leng",              email: "waileng@nagase.com.my",            stamps: [3] },
   { name: "Lim Chun Hoe",              email: "chunhoe@nagase.com.my",            stamps: [1, 2, 3] },
   { name: "Lim Khang Jing",            email: "jing@nagase.com.my",               stamps: [1, 2] },
   { name: "Lo Kit Yan",                email: "kityan@nagase.com.my",             stamps: [1, 2, 3] },
@@ -99,11 +99,11 @@ const MEMBERS = [
   { name: "Steven Low Ching Yong",      email: "stevenlow@nagase.com.my",         stamps: [1, 2, 3] },
   { name: "Sua Meng Fang",              email: "sua@nagase.com.my",               stamps: [1, 2, 3] },
   { name: "Suzanne Chin Yoke Sim",      email: "suzanne@nagase.com.my",           stamps: [1, 2, 3] },
-  { name: "T-Jay Lee Teng Chun",        email: "lee@nagase.com.my",               stamps: [1, 2] },
+  { name: "T-Jay Lee Teng Chun",        email: "lee@nagase.com.my",               stamps: [1, 2, 3] },
   { name: "Tan Wei Rou",               email: "weirou@nagase.com.my",             stamps: [1, 2] },
   { name: "Yong Sui Wei",              email: "yongsw@nagase.com.my",             stamps: [1] },
   { name: "Yukee Yoo Ying Ying",        email: "yukee@nagase.com.my",             stamps: [] },
-  { name: "Zambri",                     email: "zambrimustapa77@gmail.com",        stamps: [1] },
+  { name: "Zambri",                     email: "zambrimustapa77@gmail.com",        stamps: [1, 2] },
 ];
 
 // =============================================
