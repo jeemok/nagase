@@ -16,7 +16,7 @@
 //    5=UK, 6=France, 7=Italy, 8=Australia, 9=South Korea,
 //    10=Mexico, 11=Japan, 12=Canada, 13=India,
 //    14=Germany, 15=Spain, 16=Kenya, 17=Argentina,
-//    18=New Zealand, 19=Norway
+//    18=New Zealand
 // 3. Save, commit, and push — Vercel auto-deploys
 //
 // EXAMPLE: To mark someone as completing Netherlands & Egypt:
@@ -46,7 +46,6 @@ const COUNTRIES = [
   { id: 16, name: "Kenya",          month: "",          stamp: "",             released: false },
   { id: 17, name: "Argentina",      month: "",          stamp: "",             released: false },
   { id: 18, name: "New Zealand",    month: "",          stamp: "",             released: false },
-  { id: 19, name: "Norway",         month: "",          stamp: "",             released: false },
 ];
 
 const MEMBERS = [
