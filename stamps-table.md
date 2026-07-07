@@ -1,70 +1,71 @@
 # Nagase KL Global Passport — Stamps Crosscheck
 
-| # | Name | Thailand (APR) | Netherlands (MAY) | Egypt (MAY) | Brazil (JUN) | Total |
-|---|------|:-:|:-:|:-:|:-:|:-:|
-| 1 | Ahmad Hafiz Bin Abdullah | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 2 | Alicia Poon Zi Yet | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 3 | Angela Chong Suk Chien | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 4 | Atsuki Katsunori | — | ✅ | — | — | 1/4 |
-| 5 | Boey Cheah Jen Bao | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 6 | Brandon Liang Chi Wai | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 7 | Catherine Ch'ng Phei Yeun | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 8 | Chai Pei Yee | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 9 | Charles Chen Wei Lun | — | — | — | — | 0/4 |
-| 10 | Chiang Wen Ying | — | — | ✅ | ✅ | 2/4 |
-| 11 | Chong Kim Lean | — | ✅ | ✅ | ✅ | 3/4 |
-| 12 | Darren Teh Sze Wei | — | ✅ | ✅ | — | 2/4 |
-| 13 | Dawson Tan Mun Ting | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 14 | Ding Fan Shee | ✅ | ✅ | — | — | 2/4 |
-| 15 | Ean Cheong Yee Yan | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 16 | Erica Chiew Lai Wah | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 17 | Eve Chai Pei Hua | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 18 | Grace Tan Li Yin | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 19 | Jadoli | ✅ | — | ✅ | — | 2/4 |
-| 20 | Janice How Jia Yeng | ✅ | ✅ | ✅ | — | 3/4 |
-| 21 | Jeston Lim Wei Jian | ✅ | — | ✅ | — | 2/4 |
-| 22 | Joey Yu Szu Hui | ✅ | — | — | — | 1/4 |
-| 23 | Johnny Kwee Jyh Tzuen | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 24 | Keith Chu Yu Huan | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 25 | Kek Yin Teng | ✅ | ✅ | — | ✅ | 3/4 |
-| 26 | Kenny Yap Woon Hoi | ✅ | ✅ | — | ✅ | 3/4 |
-| 27 | Kenth Leong Khan Shing | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 28 | Khoo Ee Leen | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 29 | Kon Suli | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 30 | Kow Yip Chang | ✅ | ✅ | — | ✅ | 3/4 |
-| 31 | Lai Mei Yun | ✅ | — | ✅ | — | 2/4 |
-| 32 | Lam Shin Wei | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 33 | Lee Wai Leng | — | — | ✅ | — | 1/4 |
-| 34 | Lim Chun Hoe | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 35 | Lim Khang Jing | ✅ | ✅ | — | ✅ | 3/4 |
-| 36 | Lo Kit Yan | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 37 | Loi Siew Thong | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 38 | Maznah Binti Suffian | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 39 | Melvin Tan Kok Guan | — | — | — | — | 0/4 |
-| 40 | Michelle Lee Yin Fun | — | — | — | — | 0/4 |
-| 41 | Michelle Yap Jing Yi | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 42 | Mohd Farrel Mohd Yousof | — | ✅ | ✅ | — | 2/4 |
-| 43 | Morita Takehiro | — | — | — | — | 0/4 |
-| 44 | Nezam | ✅ | ✅ | — | ✅ | 3/4 |
-| 45 | Phua Boon Guan | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 46 | Shanice Loo Lay Swan | ✅ | ✅ | — | ✅ | 3/4 |
-| 47 | Shibata Kenro | — | — | ✅ | — | 1/4 |
-| 48 | Steven Low Ching Yong | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 49 | Sua Meng Fang | ✅ | ✅ | ✅ | — | 3/4 |
-| 50 | Suzanne Chin Yoke Sim | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 51 | T-Jay Lee Teng Chun | ✅ | ✅ | ✅ | ✅ | 4/4 |
-| 52 | Tan Wei Rou | ✅ | ✅ | — | ✅ | 3/4 |
-| 53 | Yong Sui Wei | ✅ | — | — | ✅ | 2/4 |
-| 54 | Yukee Yoo Ying Ying | — | — | — | — | 0/4 |
-| 55 | Zambri | ✅ | ✅ | — | ✅ | 3/4 |
-| **Total** | **55 members** | **43** | **42** | **38** | **38** | — |
+| # | Name | Thailand (APR) | Netherlands (MAY) | Egypt (MAY) | Brazil (JUN) | USA (JUL) | Total |
+|---|------|:-:|:-:|:-:|:-:|:-:|:-:|
+| 1 | Ahmad Hafiz Bin Abdullah | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 2 | Alicia Poon Zi Yet | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 3 | Angela Chong Suk Chien | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 4 | Atsuki Katsunori | — | ✅ | — | — | — | 1/5 |
+| 5 | Boey Cheah Jen Bao | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 6 | Brandon Liang Chi Wai | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 7 | Catherine Ch'ng Phei Yeun | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 8 | Chai Pei Yee | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 9 | Charles Chen Wei Lun | — | — | — | — | — | 0/5 |
+| 10 | Chiang Wen Ying | — | — | ✅ | ✅ | ✅ | 3/5 |
+| 11 | Chong Kim Lean | — | ✅ | ✅ | ✅ | ✅ | 4/5 |
+| 12 | Darren Teh Sze Wei | — | ✅ | ✅ | — | — | 2/5 |
+| 13 | Dawson Tan Mun Ting | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 14 | Ding Fan Shee | ✅ | ✅ | — | — | — | 2/5 |
+| 15 | Ean Cheong Yee Yan | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 16 | Erica Chiew Lai Wah | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 17 | Eve Chai Pei Hua | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 18 | Grace Tan Li Yin | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 19 | Jadoli | ✅ | — | ✅ | — | ✅ | 3/5 |
+| 20 | Janice How Jia Yeng | ✅ | ✅ | ✅ | — | — | 3/5 |
+| 21 | Jeston Lim Wei Jian | ✅ | — | ✅ | — | ✅ | 3/5 |
+| 22 | Joey Yu Szu Hui | ✅ | — | — | — | — | 1/5 |
+| 23 | Johnny Kwee Jyh Tzuen | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 24 | Keith Chu Yu Huan | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 25 | Kek Yin Teng | ✅ | ✅ | — | ✅ | — | 3/5 |
+| 26 | Kenny Yap Woon Hoi | ✅ | ✅ | — | ✅ | ✅ | 4/5 |
+| 27 | Kenth Leong Khan Shing | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 28 | Khoo Ee Leen | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 29 | Kon Suli | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 30 | Kow Yip Chang | ✅ | ✅ | — | ✅ | — | 3/5 |
+| 31 | Lai Mei Yun | ✅ | — | ✅ | — | — | 2/5 |
+| 32 | Lam Shin Wei | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 33 | Lee Wai Leng | — | — | ✅ | — | ✅ | 2/5 |
+| 34 | Lim Chun Hoe | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 35 | Lim Khang Jing | ✅ | ✅ | — | ✅ | ✅ | 4/5 |
+| 36 | Lo Kit Yan | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 37 | Loi Siew Thong | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 38 | Maznah Binti Suffian | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 39 | Melvin Tan Kok Guan | — | — | — | — | — | 0/5 |
+| 40 | Michelle Lee Yin Fun | — | — | — | — | — | 0/5 |
+| 41 | Michelle Yap Jing Yi | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 42 | Mohd Farrel Mohd Yousof | — | ✅ | ✅ | — | — | 2/5 |
+| 43 | Morita Takehiro | — | — | — | — | — | 0/5 |
+| 44 | Nezam | ✅ | ✅ | — | ✅ | — | 3/5 |
+| 45 | Phua Boon Guan | ✅ | ✅ | ✅ | ✅ | — | 4/5 |
+| 46 | Shanice Loo Lay Swan | ✅ | ✅ | — | ✅ | ✅ | 4/5 |
+| 47 | Shibata Kenro | — | — | ✅ | — | ✅ | 2/5 |
+| 48 | Steven Low Ching Yong | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 49 | Sua Meng Fang | ✅ | ✅ | ✅ | — | ✅ | 4/5 |
+| 50 | Suzanne Chin Yoke Sim | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 51 | T-Jay Lee Teng Chun | ✅ | ✅ | ✅ | ✅ | ✅ | 5/5 |
+| 52 | Tan Wei Rou | ✅ | ✅ | — | ✅ | ✅ | 4/5 |
+| 53 | Yong Sui Wei | ✅ | — | — | ✅ | — | 2/5 |
+| 54 | Yukee Yoo Ying Ying | — | — | — | — | ✅ | 1/5 |
+| 55 | Zambri | ✅ | ✅ | — | ✅ | — | 3/5 |
+| **Total** | **55 members** | **43** | **42** | **38** | **38** | **29** | — |
 
 ## Summary
 
 | Category | Count | Members |
 |---|---|---|
-| 4/4 stamps | 27 | Ahmad Hafiz Bin Abdullah, Alicia Poon Zi Yet, Angela Chong Suk Chien, Boey Cheah Jen Bao, Brandon Liang Chi Wai, Catherine Ch'ng Phei Yeun, Chai Pei Yee, Dawson Tan Mun Ting, Ean Cheong Yee Yan, Erica Chiew Lai Wah, Eve Chai Pei Hua, Grace Tan Li Yin, Johnny Kwee Jyh Tzuen, Keith Chu Yu Huan, Kenth Leong Khan Shing, Khoo Ee Leen, Kon Suli, Lam Shin Wei, Lim Chun Hoe, Lo Kit Yan, Loi Siew Thong, Maznah Binti Suffian, Michelle Yap Jing Yi, Phua Boon Guan, Steven Low Ching Yong, Suzanne Chin Yoke Sim, T-Jay Lee Teng Chun |
-| 3/4 stamps | 11 | Chong Kim Lean, Janice How Jia Yeng, Kek Yin Teng, Kenny Yap Woon Hoi, Kow Yip Chang, Lim Khang Jing, Nezam, Shanice Loo Lay Swan, Sua Meng Fang, Tan Wei Rou, Zambri |
-| 2/4 stamps | 8 | Chiang Wen Ying, Darren Teh Sze Wei, Ding Fan Shee, Jadoli, Jeston Lim Wei Jian, Lai Mei Yun, Mohd Farrel Mohd Yousof, Yong Sui Wei |
-| 1/4 stamps | 4 | Atsuki Katsunori, Joey Yu Szu Hui, Lee Wai Leng, Shibata Kenro |
-| 0/4 stamps | 5 | Charles Chen Wei Lun, Melvin Tan Kok Guan, Michelle Lee Yin Fun, Morita Takehiro, Yukee Yoo Ying Ying |
+| 5/5 stamps | 17 | Alicia Poon Zi Yet, Catherine Ch'ng Phei Yeun, Dawson Tan Mun Ting, Ean Cheong Yee Yan, Erica Chiew Lai Wah, Eve Chai Pei Hua, Grace Tan Li Yin, Kenth Leong Khan Shing, Khoo Ee Leen, Kon Suli, Lim Chun Hoe, Loi Siew Thong, Maznah Binti Suffian, Michelle Yap Jing Yi, Steven Low Ching Yong, Suzanne Chin Yoke Sim, T-Jay Lee Teng Chun |
+| 4/5 stamps | 16 | Ahmad Hafiz Bin Abdullah, Angela Chong Suk Chien, Boey Cheah Jen Bao, Brandon Liang Chi Wai, Chai Pei Yee, Chong Kim Lean, Johnny Kwee Jyh Tzuen, Keith Chu Yu Huan, Kenny Yap Woon Hoi, Lam Shin Wei, Lim Khang Jing, Lo Kit Yan, Phua Boon Guan, Shanice Loo Lay Swan, Sua Meng Fang, Tan Wei Rou |
+| 3/5 stamps | 8 | Chiang Wen Ying, Jadoli, Janice How Jia Yeng, Jeston Lim Wei Jian, Kek Yin Teng, Kow Yip Chang, Nezam, Zambri |
+| 2/5 stamps | 7 | Darren Teh Sze Wei, Ding Fan Shee, Lai Mei Yun, Lee Wai Leng, Mohd Farrel Mohd Yousof, Shibata Kenro, Yong Sui Wei |
+| 1/5 stamps | 3 | Atsuki Katsunori, Joey Yu Szu Hui, Yukee Yoo Ying Ying |
+| 0/5 stamps | 4 | Charles Chen Wei Lun, Melvin Tan Kok Guan, Michelle Lee Yin Fun, Morita Takehiro |
