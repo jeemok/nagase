@@ -104,6 +104,7 @@ const MEMBERS = [
   { name: "Yong Sui Wei",              email: "yongsw@nagase.com.my",             stamps: [1, 4] },
   { name: "Yukee Yoo Ying Ying",        email: "yukee@nagase.com.my",             stamps: [5] },
   { name: "Zambri",                     email: "zambrimustapa77@gmail.com",        stamps: [1, 2, 4, 6] },
+  { name: "Tezuka Jun",                 email: "jun.tezuka@nagase.co.jp",         stamps: [] },
 ];
 
 // =============================================
