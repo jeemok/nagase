@@ -21,7 +21,7 @@
       <g filter="url(#stampWorn)">
         <g clip-path="url(#stamp-content)">
           <g transform="translate(13, 32) scale(0.318290)">
-            <g transform="translate(0.000000,1820.000000) scale(0.100000,-0.100000)" fill="#c9a84c" stroke="none">
+            <g transform="translate(0.000000,1820.000000) scale(0.100000,-0.100000)" fill="#c3c8ce" stroke="none">
 <path d="M6175 18192 c-6 -5 -50 -23 -100 -41 -102 -37 -400 -154 -460 -181
 -22 -9 -83 -36 -135 -58 -89 -38 -231 -104 -430 -201 -80 -38 -145 -73 -265
 -141 -27 -15 -66 -37 -85 -48 -384 -216 -779 -484 -1147 -779 -156 -125 -194
@@ -5176,8 +5176,8 @@ m-73 -11 c0 -8 -7 -15 -15 -15 -16 0 -20 12 -8 23 11 12 23 8 23 -8z"/>
           </g>
         </g>
       </g>
-      <circle cx="300" cy="300" r="289" fill="none" stroke="#c9a84c" stroke-width="2.4"/>
-      <circle cx="300" cy="300" r="281" fill="none" stroke="#c9a84c" stroke-width="2.4"/>
+      <circle cx="300" cy="300" r="289" fill="none" stroke="#c3c8ce" stroke-width="2.4"/>
+      <circle cx="300" cy="300" r="281" fill="none" stroke="#c3c8ce" stroke-width="2.4"/>
     </g>
   </g>
 </svg>
