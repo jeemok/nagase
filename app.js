@@ -406,6 +406,12 @@ function escapeHtmlSafe(str) {
 // ---- GALLERY ----
 let galleryAudio = null;
 
+const isVideo = (src) => /\.mp4$/i.test(src);
+const posterOf = (src) => src.replace(/\.mp4$/i, "-poster.webp");
+const mediaHtml = (src, i) => isVideo(src)
+  ? `<video class="lb-img" src="${src}" poster="${posterOf(src)}" controls autoplay playsinline></video>`
+  : `<img class="lb-img" src="${src}" alt="Photo ${i + 1}" />`;
+
 function openGallery(countryId) {
   const photos = PHOTOS[countryId] || [];
   if (!photos.length) return;
@@ -418,14 +424,14 @@ function openGallery(countryId) {
       <div class="gallery-header">
         <div>
           <div class="gallery-title">${country.name}</div>
-          <div class="gallery-subtitle">${country.month} · ${photos.length} photos</div>
+          <div class="gallery-subtitle">${country.month} · ${photos.length - photos.filter(isVideo).length} photos${photos.some(isVideo) ? ` · ${photos.filter(isVideo).length} videos` : ""}</div>
         </div>
         <button class="gallery-close" onclick="closeGallery()">✕</button>
       </div>
       <div class="gallery-grid">
         ${photos.map((src, i) => `
-          <div class="gallery-thumb" onclick="openLightbox(${countryId}, ${i})">
-            <img src="${src}" alt="Photo ${i + 1}" loading="lazy" />
+          <div class="gallery-thumb${isVideo(src) ? " is-video" : ""}" onclick="openLightbox(${countryId}, ${i})">
+            <img src="${isVideo(src) ? posterOf(src) : src}" alt="${isVideo(src) ? "Video" : "Photo"} ${i + 1}" loading="lazy" />
           </div>
         `).join("")}
       </div>
@@ -452,6 +458,7 @@ function openGallery(countryId) {
 function closeGallery() {
   const modal = document.querySelector(".gallery-modal");
   if (!modal) return;
+  modal.querySelectorAll("video").forEach((v) => v.pause());
   modal.classList.remove("active");
   setTimeout(() => modal.remove(), 280);
   document.removeEventListener("keydown", handleGalleryKey);
@@ -492,7 +499,7 @@ function openLightbox(countryId, index) {
     <button class="lb-close" onclick="closeLightbox()">✕</button>
     <button class="lb-prev" onclick="lightboxNav(-1)">&#8249;</button>
     <div class="lb-img-wrap">
-      <img class="lb-img" src="${photos[index]}" alt="Photo ${index + 1}" />
+      ${mediaHtml(photos[index], index)}
     </div>
     <button class="lb-next" onclick="lightboxNav(1)">&#8250;</button>
     <div class="lb-counter">${index + 1} / ${photos.length}</div>
@@ -508,7 +515,7 @@ function openLightbox(countryId, index) {
 
 function closeLightbox() {
   const lb = document.querySelector(".gallery-lightbox");
-  if (lb) lb.remove();
+  if (lb) { const v = lb.querySelector("video"); if (v) v.pause(); lb.remove(); }
 }
 
 function lightboxNav(dir) {
@@ -518,7 +525,9 @@ function lightboxNav(dir) {
   const photos = PHOTOS[countryId];
   const index = (parseInt(lb.dataset.index) + dir + photos.length) % photos.length;
   lb.dataset.index = index;
-  lb.querySelector(".lb-img").src = photos[index];
+  const old = lb.querySelector(".lb-img");
+  if (old.tagName === "VIDEO") old.pause();
+  old.outerHTML = mediaHtml(photos[index], index);
   lb.querySelector(".lb-counter").textContent = `${index + 1} / ${photos.length}`;
 }
 
